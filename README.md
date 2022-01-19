@@ -14,7 +14,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### baixando datos
+### baixando dados
 ```
 wget -O dados.csv https://covid.ourworldindata.org/data/owid-covid-data.csv
 ```
