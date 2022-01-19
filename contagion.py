@@ -23,9 +23,6 @@ def contagion(day):
     return mymodel(day)
 
 
-print(contagion(1))
-
-
 def print_contagion(days):
     if days < 0:
         print("please put a number greater than 0")
