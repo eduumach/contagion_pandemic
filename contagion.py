@@ -28,4 +28,4 @@ def print_contagion(days):
         print("please put a number greater than 0")
     else:
         for day in range(days):
-            print("day: ", day, "number of cases: ", round(contagion(day), 2))
+            print("day: ", day, "number of cases: ", round(contagion(day)*1000000, 2))
