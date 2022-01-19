@@ -1,1 +1,3 @@
-dados/
+venv/
+.vscode
+dados.csv
