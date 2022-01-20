@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 
 
-def contagion(day):
+def contagion(days):
     try:
         data = pd.read_csv('dados.csv')
     except:
@@ -23,12 +23,18 @@ def contagion(day):
 
     mymodel = np.poly1d(np.polyfit(x, y, 3))
 
-    return mymodel(day)
+    days_array = []
+    for day in range(days):
+        days_array.append(mymodel(day))
+
+    return days_array
 
 
 def print_contagion(days):
     if days < 0:
         print("please put a number greater than 0")
     else:
-        for day in range(days):
-            print("day: ", day, "number of cases: ", round(contagion(day)*1000000, 2))
+        i = 1
+        for case in contagion(days):
+            print("day: ", i, "number of cases:", case)
+            i += 1
