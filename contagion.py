@@ -3,8 +3,11 @@ import numpy as np
 
 
 def contagion(day):
-
-    data = pd.read_csv('dados.csv')
+    try:
+        data = pd.read_csv('dados.csv')
+    except:
+        print("please download the file")
+        quit()
 
     data['date'] = pd.to_datetime(data['date'])
 
